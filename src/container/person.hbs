@@ -1,0 +1,47 @@
+<div>
+    {{#with person}}
+    <div>
+        <h1> {{name}}</h1>
+        <div> {{age}}</div>
+        <div> {{gender}}</div>
+        <address> {{#with address}}
+            {{street}}, {{city}}, {{state}}, {{zip}}, {{country}}
+            {{/with}}
+        </address>
+        <hr>
+        <br>
+    </div>
+
+    <br>
+
+    {{>title big=true data='Education'}}
+
+    <div>
+        {{#each education}}
+        <div> {{degree}} </div>
+        <div> {{major}} </div>
+        <div> {{university}} </div>
+        {{/each}}
+        <hr>
+        <br>
+    </div>
+
+    <br>
+
+    {{>title big=true data='WorkExperience'}}
+
+    <div>
+        {{#each workExper}}
+        <div> {{degree}} </div>
+        <div> {{major}} </div>
+        <div> {{university}} </div>
+        {{/each}}
+        <hr>
+        <br>
+    </div>
+
+    <br>
+
+
+    {{/with}}
+</div>
