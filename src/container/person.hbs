@@ -31,10 +31,80 @@
     {{>title big=true data='WorkExperience'}}
 
     <div>
-        {{#each workExper}}
-        <div> {{degree}} </div>
-        <div> {{major}} </div>
-        <div> {{university}} </div>
+        {{#each workExperience}}
+        <div> {{company}} </div>
+        <div> {{title}} </div>
+        <div> {{startDate}} - {{endDate}} </div>
+
+        <div>
+            <ul>
+                {{#each responsibilities}}
+                <li> {{this}} </li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <div> Founded: {{year_founded}}</div>
+        <div> Industry: {{industry}}</div>
+
+        <div>
+            {{#each employees}}
+            <div> {{name}}</div>
+            <div> {{position}}</div>
+            <div> {{department}}</div>
+            <div>
+                {{>title big=true data='Projects:'}}
+                <div>
+                    {{#each projects}}
+                    <div> <b> {{name}} </b> </div>
+                    <div> {{description}} </div>
+                    <div> {{status}} </div>
+                    <ul>
+                        {{#each teams}}
+                        <li> <b> {{team_name}} </b> </li>
+                        <div>
+                            <em>
+                                {{#with team_leader}}
+                                <div> {{name}} </div>
+                                <div> {{title}}</div>
+                                <div> {{email}}</div>
+                                {{/with}}
+                            </em>
+                        </div>
+                        <br>
+                        <br>
+
+                        <div>
+                            {{#each team_members}}
+                            <div> {{name}}</div>
+                            <div> {{title}}</div>
+                            <div> {{email}}</div>
+                            <div> {{skills}}</div>
+                            <br>
+                            <br>
+                            <div>
+                                {{#each projects}}
+                                <div> <b> {{name}} </b> </div>
+                                <div> {{description}}</div>
+                                <div> {{technologies}}</div>
+                                <br>
+                                <ul>
+                                    <li> {{team_members.[0].name}} </li>
+                                    <div> {{team_members.[0].title}} </div>
+                                    <li> {{team_members.[1].name}} </li>
+                                    <div> {{team_members.[1].title}} </div>
+                                </ul>
+                                {{/each}}
+                            </div>
+                            {{/each}}
+                        </div>
+                        {{/each}}
+                    </ul>
+                    {{/each}}
+                </div>
+            </div>
+            {{/each}}
+        </div>
         {{/each}}
         <hr>
         <br>
