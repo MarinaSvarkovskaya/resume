@@ -1,0 +1,84 @@
+<div class="display-1">
+    {{name}}
+</div>
+<div> {{description}}</div>
+<div>
+    {{#with history}}
+    <div> {{year}}</div>
+    <div> {{founder}}</div>
+    {{/with}}
+</div>
+
+<br>
+<br>
+<div class=" card" style="width: 18rem;">
+    <button type="button" class="btn btn-success"> Types:</button>
+    {{#each types}}
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"> {{this}}</li>
+    </ul>
+    {{/each}}
+</div>
+
+<br>
+<br>
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <button type="button" class="btn btn-link">Syntax</button>
+        <div>
+            {{#with syntax}}
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"> <span class="text-uppercase">Variables:</span>{{variables}}</li>
+                <li class="list-group-item"> <span class="text-uppercase">Functions:</span> {{functions}}</li>
+                <li class="list-group-item"> <span class="text-uppercase">Conditionals:</span>{{conditionals}}</li>
+                <li class="list-group-item"> <span class="text-uppercase">Loops:</span>{{loops}}</li>
+                <li class="list-group-item"> <span class="text-uppercase"> Classes:</span>{{classes}}</li>
+            </ul>
+            {{/with}}
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="card" style="width: 18rem;">
+    <button type="button" class="btn btn-light">Features:</button>
+    {{#each features}}
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"> {{this}}</li>
+    </ul>
+    {{/each}}
+</div>
+<br>
+<br>
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        Libraries:
+    </div>
+    {{#each libraries}}
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"> {{this}}</li>
+    </ul>
+    {{/each}}
+</div>
+<br>
+<br>
+<div class="card" style="width: 18rem;">
+    <button type="button" class="btn btn-info">Tools:</button>
+    {{#each tools}}
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"> {{this}}</li>
+    </ul>
+    {{/each}}
+</div>
+<br>
+<br>
+<div class="card" style="width: 18rem;">
+    <button type="button" class="btn btn-primary"> Community:</button>
+
+    {{#each community}}
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"> <span class="text-uppercase"> {{name}}</span> - {{type}} </li>
+    </ul>
+    {{/each}}
+</div>
