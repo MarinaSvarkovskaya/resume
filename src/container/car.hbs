@@ -1,0 +1,255 @@
+<div class="card">
+    <div class="card-body">
+        <div class="display-1"> {{make}} {{model}} </div>
+        <div> <span class="text-uppercase"> Color - </span> {{color}}, ({{year}} year)</div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div class="card">
+    <div class="card-body">
+        <br>
+        <div>
+            {{#with features.interior}}
+            <h2> Features interior</h2>
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        {{#with seats }}
+                        <h3 class="text-center"> Seats</h3>
+                        <div>Material - {{material}} </div>
+                        <div>Color - {{color}} </div>
+                        <div>
+                            {{#if heated}}
+                            <div> heated - complete </div>
+                            {{/if}}
+                        </div>
+                        <div>
+                            {{#if ventilated}}
+                            <div> ventilated - complete </div>
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                    <br>
+                    <br>
+                    <div>
+                        {{#with dashboard}}
+                        <h3 class="text-center"> Dashboard </h3>
+                        <div> Material - {{material}} </div>
+                        <div> Color - {{color}} </div>
+                        <div>
+                            {{#with display}}
+                            <div> Type - {{type}}</div>
+                            <div> Size - {{type}}</div>
+                            <div> resolution - {{resolution}}</div>
+                            <div>
+                                {{#if touchscreen}}
+                                <div> touchscreen - complete </div>
+                                {{/if}}
+                            </div>
+                            {{/with}}
+                        </div>
+                        {{/with}}
+                    </div>
+
+                    <br>
+                    <br>
+                    <div>
+                        {{#with audio}}
+                        <h3 class="text-center"> Audio</h3>
+                        <div> System - {{system}}</div>
+                        <div> Speakers - {{speakers}}</div>
+                        <div>
+                            {{#if subwoofer}}
+                            <div> Subwoofer - complete </div>
+                            {{/if}}
+                        </div>
+                        <div>
+                            {{#if bluetooth}}
+                            <div> Bluetooth - complete </div>
+                            {{/if}}
+                        </div>
+                        <div>
+                            {{#if USB}}
+                            <div> USB - complete </div>
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div>
+            {{#with features.exterior}}
+            <h2> Features exterior</h2>
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        {{#with wheels}}
+                        <h3 class="text-center"> Wheels</h3>
+                        <div> Size - {{size}}</div>
+                        <div> Type - {{type}}</div>
+                        <div> Color - {{color}}</div>
+                        {{/with}}
+                    </div>
+                    <br>
+                    <div>
+                        {{#with headlights}}
+                        <h3 class="text-center"> Headlights</h3>
+                        <div> Type - {{type}}</div>
+                        <div> Brightness - {{brightness}}</div>
+                        <div>
+                            {{#if automatic}}
+                            <div> Automatic - complete </div>
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                    <br>
+                    <div>
+                        {{#with sunroof}}
+                        <h3 class="text-center"> Sunroof</h3>
+                        <div> Type - {{type}}</div>
+                        <div> Size - {{size}}</div>
+                        <div>
+                            {{#if automatic}}
+                            <div> Automatic - complete </div>
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div>
+            {{#with features.safety}}
+            <h2> Features safety</h2>
+            <div class="card">
+                <div class="card-body">
+                    <div>
+                        {{#with airbags}}
+                        <h3 class="text-center"> Airbags</h3>
+                        <div> Front - {{front}}</div>
+                        <div> Side - {{side}}</div>
+                        <div> Knee - {{knee}}</div>
+                        <div> Rear - {{rear}}</div>
+                        {{/with}}
+                    </div>
+                    <br>
+                    <div>
+                        {{#with assistance}}
+                        <h3 class="text-center"> Assistance</h3>
+                        <div>
+                            {{#if blind_spot_monitoring}}
+                            <div> Blind spot monitoring - Compleate</div>
+                            {{/if}}
+                        </div>
+                        <div>
+                            {{#if rear_cross_traffic_alert}}
+                            <div> Rear cross traffic alert - Compleate</div>
+                            {{/if}}
+                        </div>
+                        <div>
+                            {{#if lane_departure_warning}}
+                            <div> Lane departure warning - Compleate</div>
+                            {{/if}}
+                        </div>
+                        <div>
+                            {{#if adaptive_cruise_control}}
+                            <div> Adaptive cruise control - Compleate</div>
+                            {{/if}}
+                        </div>
+                        <div>
+                            {{#if collision_warning}}
+                            <div> Collision warning - Compleate</div>
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div>
+            {{#with engine}}
+            <h2> Engine</h2>
+            <div class="card">
+                <div class="card-body">
+                    <div> Type - {{type}}</div>
+                    <div> Displacement - {{displacement}}</div>
+                    <div> Horsepower - {{horsepower}}</div>
+                    <div> Torque - {{torque}}</div>
+                    <div>
+                        {{#with tranmission}}
+                        <div> {{type}}</div>
+                        <div> {{gears}}</div>
+                        {{/with}}
+                    </div>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div>
+            {{#with fuel_economy}}
+            <h2> Fuel economy</h2>
+            <div class="card">
+                <div class="card-body">
+                    <div> City - {{city}}</div>
+                    <div> Highway - {{highway}}</div>
+                    <div> Combined - {{combined}}</div>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div>
+            {{#with price}}
+            <h2> Price</h2>
+            <div class="card">
+                <div class="card-body">
+
+                    <div> Base - {{base}}</div>
+                    <div> Destination - {{destination}}</div>
+                    <div>
+                        {{#with options}}
+                        <div> Navigation - {{navigation}}</div>
+                        <div> Moonroof - {{moonroof}}</div>
+                        <div> Premium_paint - {{premium_paint}}</div>
+                        {{/with}}
+                    </div>
+                    <div> Total - {{total}}</div>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+    </div>
+</div>
