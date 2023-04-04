@@ -1,0 +1,215 @@
+<div class="card">
+    <div class="card-body">
+        <div class="card">
+            <div class="card-body">
+                <span class="display-2"> {{name}}</span>
+                <p class="card-text"> {{description}}</p>
+                <button type="button" class="btn btn-success"> <b> Price:</b> {{price}}</button>
+                <br>
+                <br>
+                <div><a href="#" class="card-link"> {{category}}</a> </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div>
+            {{#with features}}
+            <div class="card">
+                <div class="card-body">
+                    <br>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Processor
+                        </button>
+                        <ul class="dropdown-menu">
+                            {{#with processor}}
+                            <li>
+                                <div> Brand: {{brand}} </div>
+                                <div> Model: {{model}} </div>
+                                <div> Speed: {{speed}} </div>
+                                <div> Cores: {{cores}} </div>
+                                <div> Cache: {{cache}} </div>
+                            </li>
+                            {{/with}}
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+
+                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Memory
+                        </button>
+                        <ul class="dropdown-menu">
+                            {{#with memory}}
+                            <li>
+                                <div>Type - {{type}} </div>
+                                <div>Size - {{size}} </div>
+                                <div>Speed - {{speed}} </div>
+                            </li>
+                            {{/with}}
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+
+                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Storage
+                        </button>
+                        <ul class="dropdown-menu">
+                            {{#with storage}}
+                            <li>
+                                <div>Type - {{type}} </div>
+                                <div>Size - {{size}} </div>
+                            </li>
+                            {{/with}}
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+
+                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Display
+                        </button>
+                        <ul class="dropdown-menu">
+                            {{#with display}}
+                            <li>
+                                <div> Size: {{size}} </div>
+                                <div> Resolution: {{resolution}} </div>
+                                <div> Technology: {{technology}} </div>
+                                <div> Color space: {{color_space}} </div>
+                                <div> Brightness: {{brightness}} </div>
+                                <div> Refresh rate: {{brightness}} </div>
+                            </li>
+                            {{/with}}
+                        </ul>
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+
+                    <div class="btn-group">
+
+                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Graphics
+                        </button>
+                        <ul class="dropdown-menu">
+                            {{#with graphics}}
+                            <li>
+                                <div> Brand: {{brand}} </div>
+                                <div> Model: {{model}} </div>
+                                <div> Memory: {{memory}} </div>
+                            </li>
+                            {{/with}}
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+
+                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Ports
+                        </button>
+                        <ul class="dropdown-menu">
+                            {{#each ports}}
+                            <li>
+                                <div> Type: {{type}} </div>
+                                <div> Count: {{count}} </div>
+                                <ul>
+                                    <div> <b>Feateres: </b></div>
+                                    {{#each features}}
+                                    <li>
+                                        <div>{{this}} </div>
+                                        {{/each}}
+                                    </li>
+                                </ul>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+
+
+                    <div class="btn-group">
+
+
+                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Weight
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div> Weight: {{weight}} </div>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="btn-group">
+
+                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dimensions
+                        </button>
+                        <ul class="dropdown-menu">
+                            {{#with dimensions}}
+                            <li>
+                                <div> Height: {{height}} </div>
+                                <div> Width: {{width}} </div>
+                                <div> Depth: {{depth}} </div>
+                            </li>
+                            {{/with}}
+                        </ul>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div>
+                                <span class="display-6"> Operating system:</span>
+                                <div>{{operating_system}}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="display-6"> Accessories:</span>
+                            <br>
+                            {{#each accessories}}
+                            <a href="#" class="card-link"> {{name}}</a>
+                            <br>
+                            <br>
+                            <button type="button" class="btn btn-success" "btn-link"> <b> Price:</b> {{price}}</button>
+                            <br>
+                            <hr>
+                            {{/each}}
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+            {{/with}}
+        </div>
+
+
+
+
+
+    </div>
+</div>
