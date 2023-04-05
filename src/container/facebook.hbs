@@ -1,0 +1,152 @@
+<div class="card">
+    <div class="card-body">
+        <br>
+        <div class="display-4 text-center"> {{name}} </div>
+
+        <div>
+            {{#each users}}
+            <div class="display-5"> Users </div>
+            <div class="card" style="width: 18rem;">
+                <img src="#" class="card-img-top" alt="Foto">
+                <div class="card-body">
+                    <div class="text-capitalize">id: {{id}} </div>
+                    <h5 class="card-title"> {{name}} </h5>
+                    <div class="card-text"> Gender: {{gender}} </div>
+                    <div> Age: {{age}}</div>
+                    <a href="#" class="btn btn-primary"> Friends </a>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="display-5"> Friends </div>
+
+            <div>
+                {{#each friends}}
+                <br>
+                <div class="card" style="width: 18rem;">
+                    <img src="#" class="card-img-top" alt="Foto">
+                    <div class="card-body">
+                        <div class="text-capitalize">id: {{id}} </div>
+                        <h5 class="card-title"> {{name}} </h5>
+                        <div class="card-text"> Gender: {{gender}} </div>
+                        <div> Age: {{age}}</div>
+
+                        <br>
+
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Mutual friends
+                            </button>
+                            <ul class="dropdown-menu">
+                                {{#each mutual_friends }}
+                                <li>
+                                    <div> id: {{id}}</div>
+                                    <div> Name: {{name}}</div>
+                                    <div> Gender: {{gender}}</div>
+                                    <div> Age: {{age}}</div>
+                                    <div>
+                                        {{#if mutual_friends}}
+                                        <b>Mutual friends</b>
+                                        <ul>
+                                            {{#each mutual_friends}}
+                                            <li>
+                                                <div> id: {{id}}</div>
+                                                <div> Name: {{name}}</div>
+                                                <div> Gender: {{gender}}</div>
+                                                <div> Age: {{age}}</div>
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                        {{/if}}
+                                    </div>
+                                </li>
+                                <hr>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <div>
+                    {{#each groups}}
+                    <br>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <div class="text-capitalize">id: {{id}} </div>
+                            <h5 class="card-title"> {{name}} </h5>
+                            <div class="card-text"> {{description}} </div>
+
+
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Members
+                                </button>
+                                <ul class="dropdown-menu">
+                                    {{#each members}}
+                                    <li>
+                                        <div> id: {{id}}</div>
+                                        <div> Name: {{name}}</div>
+                                        <div> Gender: {{gender}}</div>
+                                        <div> Age: {{age}}</div>
+                                    </li>
+                                    <br>
+                                    <hr>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+                <br>
+                {{/each}}
+            </div>
+
+            <div>
+                {{#each groups}}
+                <br>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="text-capitalize">id: {{id}} </div>
+                        <h5 class="card-title"> {{name}} </h5>
+                        <div class="card-text"> {{description}} </div>
+
+
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Members
+                            </button>
+                            <ul class="dropdown-menu">
+                                {{#each members}}
+                                <li>
+                                    <div> id: {{id}}</div>
+                                    <div> Name: {{name}}</div>
+                                    <div> Gender: {{gender}}</div>
+                                    <div> Age: {{age}}</div>
+                                </li>
+                                <br>
+                                <hr>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            <br>
+            <hr>
+            <br>
+            {{/each}}
+        </div>
+    </div>
+</div>
