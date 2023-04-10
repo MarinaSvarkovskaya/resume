@@ -29,7 +29,7 @@
         <h2> {{title}}</h2>
         <div class="row g-3">
             {{#each cards}}
-            <div class="card col-6">
+            <div class="card col-5 mx-1 p-0">
                 <img src="{{picture.src}}" class="card-img-top" alt="{{picture.alt}}">
                 <div class="card-body">
                     <div class="card-title"> {{title}} </div>
@@ -76,7 +76,7 @@
         <h2> {{title}}</h2>
         <div class="row g-3">
             {{#each cards}}
-            <div class="card col-4">
+            <div class="card col-3 mx-2 p-0">
                 <div class="card-header"> {{name}} </div>
                 <ul class="list-group list-group-flush">
                     {{#each items}}
@@ -96,7 +96,7 @@
         <div class="display-3"> {{title}}</div>
         <div class="row g-2">
             {{#each cards}}
-            <div class="card text-bg-secondary col-5">
+            <div class="card text-bg-secondary col-4 mx-1 p-0">
                 <div class="card-header"> {{header}} </div>
                 <h5 class="card-title"> {{title}}</h5>
                 <p class="card-text"> {{description}}</p>
@@ -110,7 +110,7 @@
     <br>
     <div class="row g-3">
         {{#each rest.cards}}
-        <div class="card text-center col-5">
+        <div class="card text-center col-5 mx-1 p-0">
             <div class="card-header"> {{header}}</div>
             <div class="card-body">
                 <h5 class="card-title">{{title}}</h5>
@@ -129,7 +129,7 @@
         <div class="display-3"> {{title}}</div>
         <div class="row g-3">
             {{#each card}}
-            <div class="card text-bg-warning col-5">
+            <div class="card text-bg-warning col-5 mx-1 p-0">
                 <div class="card-header"> {{header}} </div>
                 <h5 class="card-title"> {{title}}</h5>
                 <p class="card-text"> {{description}}</p>
@@ -145,19 +145,19 @@
         {{#with footer}}
         <h5> {{title}}</h5>
 
-        <div class="col-2">
+        <div class="col-2 p-3">
             {{#each navigation}}
             <a type="button" class="btn btn-outline-primary" href="{{href}}">{{text}}</a>
             {{/each}}
         </div>
         <br>
-        <div class="col-2">
+        <div class="col-2 p-3">
             {{#each socialMedia}}
             <a type="button" class="btn btn-outline-dark" href="{{link}}"> {{name}}</a>
             {{/each}}
         </div>
         <br>
-        <div class="col-2">
+        <div class="col-2 p-3">
             {{#each partners}}
             <a type="button" class="btn btn-outline-info" href="{{link}}"> {{name}}</a>
             {{/each}}
