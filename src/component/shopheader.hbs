@@ -1,0 +1,12 @@
+<section>
+    <div>
+        <ul class="nav">
+            {{#each navigation.links}}
+            <li class="nav-item">
+                <a class="nav-link active {{#if @last}} nav-link disabled {{/if}}" href="{{href}}">
+                    {{text}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</section>
