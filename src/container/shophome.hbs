@@ -2,8 +2,8 @@
 
     <section class="card">
         <div class="row">
-            <h2 class="col-2"> {{navigation.Logo}} </h2>
-            <div class="col-6 pe-0">
+            <h2 class="col-4"> {{navigation.Logo}} </h2>
+            <div class="col-8 pe-0">
                 <ul class="nav justify-content-end">
                     {{#each navigation.links}}
                     <li class="nav-item">
@@ -19,7 +19,7 @@
         <h1 class="text-center mt-5"> {{newsBlock.title}}</h1>
         <div class="row">
             {{#each newsBlock.cards}}
-            <div class="card col-3 m-1 text-bg-dark">
+            <div class="card col-3 my-1 text-bg-dark">
                 <div class="card-body">
                     <h5 class="card-title"> {{title}} {{#if isTop}}<span
                             class="badge rounded-pill bg-danger">Top</span>{{/if}}
@@ -60,7 +60,7 @@
 
     <section class="row">
         {{#each goodsBlock.cards}}
-        <div class="card col-4 m-1">
+        <div class="card col-3 m-3 ps-2">
             <img src="{{image}}" class="card-img-top" alt="image">
             <div class="card-body">
                 <h5 class="card-title"> {{title}} {{#if isHot}}<span
@@ -87,7 +87,7 @@
                     <p> {{description}}</p>
                 </div>
 
-                <div class="col-6  pt-5 pe-0">
+                <div class="col-6  pt-3 pe-0">
                     {{#each buttons}}
                     <button type="button" class="btn btn-primary" href="{{link}}">{{text}}</button>
                     {{/each}}
